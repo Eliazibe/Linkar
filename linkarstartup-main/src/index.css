@@ -1,0 +1,170 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 8%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 8%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 8%;
+
+    --primary: 197 71% 73%;
+    --primary-foreground: 0 0% 8%;
+
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 8%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 197 71% 73%;
+    --accent-foreground: 0 0% 8%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 197 71% 73%;
+
+    --radius: 0.75rem;
+
+    /* Custom Linkar Colors */
+    --linkar-dark: 220 20% 10%;
+    --linkar-dark-secondary: 220 15% 15%;
+    --linkar-blue: 197 71% 73%;
+    --linkar-blue-light: 197 80% 85%;
+    --linkar-blue-glow: 197 100% 70%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(220 20% 10%) 0%, hsl(220 15% 18%) 100%);
+    --gradient-blue: linear-gradient(135deg, hsl(197 71% 73%) 0%, hsl(197 80% 85%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(0 0% 98%) 100%);
+
+    /* Shadows */
+    --shadow-card: 0 4px 20px -2px hsla(0, 0%, 0%, 0.08);
+    --shadow-button: 0 4px 14px -2px hsla(197, 71%, 73%, 0.4);
+    --shadow-glow: 0 0 40px hsla(197, 71%, 73%, 0.3);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 220 20% 10%;
+    --foreground: 0 0% 98%;
+
+    --card: 220 15% 15%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 220 15% 15%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 197 71% 73%;
+    --primary-foreground: 0 0% 8%;
+
+    --secondary: 220 15% 20%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 220 15% 20%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 197 71% 73%;
+    --accent-foreground: 0 0% 8%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 197 71% 73%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(197 71% 73%) 0%, hsl(197 80% 90%) 100%);
+  }
+
+  .bg-linkar-dark {
+    background-color: hsl(220 20% 10%);
+  }
+
+  .bg-linkar-dark-secondary {
+    background-color: hsl(220 15% 15%);
+  }
+
+  .bg-linkar-blue {
+    background-color: hsl(197 71% 73%);
+  }
+
+  .text-linkar-blue {
+    color: hsl(197 71% 73%);
+  }
+
+  .border-linkar-blue {
+    border-color: hsl(197 71% 73%);
+  }
+
+  .glow-blue {
+    box-shadow: 0 0 40px hsla(197, 71%, 73%, 0.3);
+  }
+
+  .hover-glow {
+    transition: box-shadow 0.3s ease;
+  }
+
+  .hover-glow:hover {
+    box-shadow: 0 0 30px hsla(197, 71%, 73%, 0.4);
+  }
+}
+
+@layer components {
+  .linkar-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .linkar-section {
+    @apply py-16 md:py-24;
+  }
+
+  .linkar-card {
+    @apply bg-white rounded-2xl p-6 md:p-8;
+    box-shadow: var(--shadow-card);
+  }
+
+  .linkar-badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium;
+    background-color: hsla(197, 71%, 73%, 0.15);
+    color: hsl(197 71% 73%);
+  }
+}
