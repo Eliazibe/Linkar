@@ -4,7 +4,7 @@ const Testimonials = () => {
   const testimonials = [
     {
       name: "Donald Sutton",
-      role: "CEO, E-commerce Fashion",
+      role: "CEO, Imobiliaria",
       content: "A Inteligência Artificial reduziu significativamente meus custos e melhorou o atendimento ao cliente. Hoje, consigo atender muito mais pessoas e administrar meu tempo com muito mais eficiência.",
       rating: 5,
     },
