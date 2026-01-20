@@ -3,9 +3,9 @@ import { Star, Quote } from "lucide-react";
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Maria Santos",
+      name: "Donald Sutton",
       role: "CEO, E-commerce Fashion",
-      content: "Com a Linkar, conseguimos atender 3x mais clientes sem aumentar a equipe. A IA entende perfeitamente as dúvidas sobre nossos produtos.",
+      content: "A Inteligência Artificial reduziu significativamente meus custos e melhorou o atendimento ao cliente. Hoje, consigo atender muito mais pessoas e administrar meu tempo com muito mais eficiência.",
       rating: 5,
     },
     {

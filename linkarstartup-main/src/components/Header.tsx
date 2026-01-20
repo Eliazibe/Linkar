@@ -33,11 +33,25 @@ const Header = () => {
           </nav>
 
           {/* Desktop CTA */}
-          <div className="hidden md:flex items-center gap-4">
+          {/* <div className="hidden md:flex items-center gap-4">
             <Button variant="heroOutline" size="default">
               Agendar Demo
             </Button>
+          </div> */}
+
+          <div className="hidden md:flex items-center gap-4">
+            <a
+              href="https://wa.me/558132999711"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button variant="heroOutline" size="default">
+                Agendar Demo
+              </Button>
+            </a>
           </div>
+
+
 
           {/* Mobile Menu Button */}
           <button className="md:hidden text-white p-2" onClick={() => setIsMenuOpen(!isMenuOpen)}>
