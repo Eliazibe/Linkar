@@ -33,38 +33,30 @@ const Hero = () => {
           </p>
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-fade-in" style={{ animationDelay: "0.3s" }}>
-            <Button variant="hero" size="xl" className="w-full sm:w-auto">
-              Começar Agora
-              <ArrowRight className="w-5 h-5" />
-            </Button>
-            <Button variant="heroOutline" size="xl" className="w-full sm:w-auto">
-              Ver Demonstração
+          <div className="flex items-center justify-center mb-16 animate-fade-in" style={{ animationDelay: "0.3s" }}>
+            <Button variant="hero" size="xl" className="w-full sm:w-auto" asChild>
+              <a href="https://wa.me/558132999711" target="_blank" rel="noopener noreferrer">
+                Começar Agora
+                <ArrowRight className="w-5 h-5" />
+              </a>
             </Button>
           </div>
 
           {/* Stats */}
-          {(() => {
-            const stats = [
+          <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: "0.4s" }}>
+            {[
               { value: "+2mil", label: "Mensagens/dia" },
-              //{ value: "+500", label: "Empresas ativas" },
               { value: "24/7", label: "Atendimento" },
               { value: "98%", label: "Satisfação" },
-            ];
-            const mdColsClass = stats.length === 3 ? "md:grid-cols-3" : "md:grid-cols-4";
-            return (
-              <div className={`grid grid-cols-2 ${mdColsClass} gap-8 max-w-3xl mx-auto animate-fade-in`} style={{ animationDelay: "0.4s" }}>
-                {stats.map((stat, index) => (
-                  <div key={index} className="text-center">
-                    <div className="text-2xl md:text-3xl font-bold text-linkar-blue mb-1">
-                      {stat.value}
-                    </div>
-                    <div className="text-white/50 text-sm">{stat.label}</div>
-                  </div>
-                ))}
+            ].map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="text-2xl md:text-3xl font-bold text-linkar-blue mb-1">
+                  {stat.value}
+                </div>
+                <div className="text-white/50 text-sm">{stat.label}</div>
               </div>
-            );
-          })()}
+            ))}
+          </div>
         </div>
 
         {/* Floating Elements */}

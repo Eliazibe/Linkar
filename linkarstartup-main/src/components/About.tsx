@@ -1,87 +1,106 @@
-import { Bot, MessageSquare, Zap } from "lucide-react";
+import { Bot, Workflow, Database, Headphones } from "lucide-react";
+
+const floatingIcons = [
+  { icon: Bot, color: "bg-orange-500", delay: "0s" },
+  { icon: Workflow, color: "bg-purple-500", delay: "0.5s" },
+  { icon: Database, color: "bg-blue-500", delay: "1s" },
+  { icon: Headphones, color: "bg-green-500", delay: "1.5s" },
+];
 
 const About = () => {
   return (
-    <section className="linkar-section bg-white">
-      <div className="linkar-container">
+    <section className="py-24 bg-white">
+      <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Image Side */}
-          <div className="relative">
-            <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-linkar-blue/20 to-linkar-blue/5 p-8">
-              <div className="aspect-square rounded-2xl bg-linkar-dark/5 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-24 h-24 rounded-2xl bg-linkar-blue/20 flex items-center justify-center mx-auto mb-4">
-                    <Bot className="w-12 h-12 text-linkar-blue" />
-                  </div>
-                  <p className="text-linkar-dark font-medium">Agente IA Linkar</p>
-                </div>
-              </div>
-
-              {/* Floating Cards */}
-              <div className="absolute -right-4 top-1/4 bg-white rounded-xl p-4 shadow-lg animate-float">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center">
-                    <MessageSquare className="w-5 h-5 text-green-600" />
-                  </div>
-                  <div>
-                    <p className="text-sm font-medium text-foreground">WhatsApp</p>
-                    <p className="text-xs text-muted-foreground">Conectado</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="absolute -left-4 bottom-1/4 bg-white rounded-xl p-4 shadow-lg animate-float" style={{ animationDelay: "1.5s" }}>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-pink-100 flex items-center justify-center">
-                    <Zap className="w-5 h-5 text-pink-600" />
-                  </div>
-                  <div>
-                    <p className="text-sm font-medium text-foreground">+150 msgs</p>
-                    <p className="text-xs text-muted-foreground">Hoje</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
           {/* Content Side */}
           <div>
-            <span className="linkar-badge mb-4">Sobre a Linkar</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              I.A. para tornar a comunicação{" "}
-              <span className="text-linkar-blue">mais simples e eficiente.</span>
+            <span className="inline-block bg-linkar-blue/20 text-linkar-dark font-medium text-sm uppercase tracking-wide px-4 py-2 rounded-full mb-6">
+              A Empresa
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-linkar-dark mb-6 leading-tight">
+              Estúdio de Tecnologia{" "}
+              <span className="text-linkar-blue">Desenvolvendo Soluções que Escalam Negócios</span>
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              A Linkar utiliza agentes de inteligência artificial para automatizar 
-              o atendimento da sua empresa. Conectamos seu negócio às principais 
-              plataformas de mensagens para que você nunca perca uma oportunidade.
-            </p>
 
-            <div className="space-y-4">
-              {[
-                {
-                  title: "Atendimento 24/7",
-                  description: "Seu agente de IA nunca dorme e responde instantaneamente.",
-                },
-                {
-                  title: "Integração Simples",
-                  description: "Conecte WhatsApp, Instagram e mais em poucos cliques.",
-                },
-                {
-                  title: "Personalização Total",
-                  description: "Configure o tom e estilo de comunicação da sua marca.",
-                },
-              ].map((item, index) => (
-                <div key={index} className="flex items-start gap-4">
-                  <div className="w-6 h-6 rounded-full bg-linkar-blue/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <div className="w-2 h-2 rounded-full bg-linkar-blue" />
+            <div className="space-y-4 mb-8">
+              <div className="flex items-start gap-3">
+                <span className="text-linkar-blue text-xl">✓</span>
+                <p className="text-gray-600">
+                  Agentes de IA Personalizados Para{" "}
+                  <span className="text-linkar-dark font-semibold">Automatizar Atendimento</span>
+                </p>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="text-linkar-blue text-xl">✓</span>
+                <p className="text-gray-600">
+                  Automações Inteligentes Para{" "}
+                  <span className="text-linkar-dark font-semibold">Eliminar Processos Manuais</span>
+                </p>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="text-linkar-blue text-xl">✓</span>
+                <p className="text-gray-600">
+                  Integração Completa Para{" "}
+                  <span className="text-linkar-dark font-semibold">Unificar Operações</span>
+                </p>
+              </div>
+            </div>
+
+            <p className="text-gray-500 text-lg leading-relaxed">
+              A Linkar é um estúdio especializado em tecnologia empresarial. 
+              Desenvolvemos agentes inteligentes, automações personalizadas e 
+              integrações estratégicas que eliminam processos manuais e escalam operações. 
+              Nosso foco é criar soluções sob medida que reduzem custos operacionais, 
+              aumentam conversões e permitem crescimento acelerado sem expandir equipes.
+            </p>
+          </div>
+
+          {/* Icons Side */}
+          <div className="relative">
+            <div className="relative h-[400px] flex items-center justify-center">
+              {/* Background glow */}
+              <div className="absolute inset-0 bg-gradient-to-br from-linkar-blue/10 to-transparent rounded-3xl" />
+              
+              {/* Floating icons */}
+              <div className="relative w-full h-full">
+                {floatingIcons.map((item, index) => {
+                  const positions = [
+                    "top-0 right-1/4",
+                    "top-1/4 right-0",
+                    "bottom-1/4 right-1/4",
+                    "bottom-0 right-1/2",
+                  ];
+                  return (
+                    <div
+                      key={index}
+                      className={`absolute ${positions[index]} animate-float`}
+                      style={{ animationDelay: item.delay }}
+                    >
+                      <div className={`w-16 h-16 ${item.color} rounded-2xl flex items-center justify-center shadow-lg`}>
+                        <item.icon className="w-8 h-8 text-white" />
+                      </div>
+                    </div>
+                  );
+                })}
+
+                {/* Central card */}
+                <div className="absolute top-1/2 left-1/4 -translate-y-1/2 bg-white border border-gray-200 rounded-2xl p-6 shadow-xl">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-12 h-12 rounded-xl bg-linkar-blue/20 flex items-center justify-center">
+                      <Bot className="w-6 h-6 text-linkar-blue" />
+                    </div>
+                    <div>
+                      <p className="text-linkar-dark font-semibold">Linkar</p>
+                      <p className="text-gray-500 text-sm">Tecnologia & Automação</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-foreground">{item.title}</h3>
-                    <p className="text-muted-foreground text-sm">{item.description}</p>
+                  <div className="flex gap-2">
+                    <span className="bg-linkar-blue/20 text-linkar-dark text-xs px-2 py-1 rounded">IA</span>
+                    <span className="bg-linkar-blue/20 text-linkar-dark text-xs px-2 py-1 rounded">CRM</span>
+                    <span className="bg-linkar-blue/20 text-linkar-dark text-xs px-2 py-1 rounded">Integrações</span>
                   </div>
                 </div>
-              ))}
+              </div>
             </div>
           </div>
         </div>

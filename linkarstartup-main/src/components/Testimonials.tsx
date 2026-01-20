@@ -77,10 +77,9 @@ const Testimonials = () => {
         </div>
 
         {/* Stats Row */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 pt-12 border-t border-white/10">
+        <div className="mt-16 grid grid-cols-3 gap-8 pt-12 border-t border-white/10">
           {[
             { value: "+2 mil", label: "Mensagens/dia" },
-            { value: "+500", label: "Empresas ativas" },
             { value: "+240", label: "Integrações" },
             { value: "98%", label: "Satisfação" },
           ].map((stat, index) => (

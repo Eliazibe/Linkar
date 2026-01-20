@@ -26,16 +26,11 @@ const CTA = () => {
               transformar a comunicação do seu negócio.
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="flex items-center justify-center">
               <Button variant="hero" size="xl" asChild>
                 <a href="https://wa.me/558132999711" target="_blank" rel="noopener noreferrer">
                   Agendar Demonstração
                   <ArrowRight className="w-5 h-5" />
-                </a>
-              </Button>
-              <Button variant="heroOutline" size="xl" asChild>
-                <a href="https://wa.me/558132999711" target="_blank" rel="noopener noreferrer">
-                  Falar com Consultor
                 </a>
               </Button>
             </div>
