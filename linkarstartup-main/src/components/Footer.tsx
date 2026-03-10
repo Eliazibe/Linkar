@@ -1,4 +1,4 @@
-import { MessageCircle, Instagram, Linkedin, Mail } from "lucide-react";
+import { Instagram, Mail } from "lucide-react";
 const Footer = () => {
   const links = {
     produto: [{
@@ -39,20 +39,12 @@ const Footer = () => {
     }]
   };
   const socials = [{
-    icon: MessageCircle,
-    href: "#",
-    label: "WhatsApp"
-  }, {
     icon: Instagram,
-    href: "#",
+    href: "https://www.instagram.com/linkarstartup",
     label: "Instagram"
   }, {
-    icon: Linkedin,
-    href: "#",
-    label: "LinkedIn"
-  }, {
     icon: Mail,
-    href: "#",
+    href: "mailto:linkarstartupoficial@gmail.com",
     label: "Email"
   }];
   return <footer className="bg-linkar-dark border-t border-white/10">
@@ -69,7 +61,7 @@ const Footer = () => {
               comunicação do seu negócio.
             </p>
             <div className="flex gap-3">
-              {socials.map((social, index) => <a key={index} href={social.href} aria-label={social.label} className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-white/60 hover:bg-linkar-blue hover:text-linkar-dark transition-colors">
+              {socials.map((social, index) => <a key={index} href={social.href} target="_blank" rel="noopener noreferrer" aria-label={social.label} className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-white/60 hover:bg-linkar-blue hover:text-linkar-dark transition-colors">
                   <social.icon className="w-5 h-5" />
                 </a>)}
             </div>

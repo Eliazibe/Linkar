@@ -67,9 +67,7 @@ const CasesDeSuccesso = () => {
               </p>
 
               <a
-                href="https://wa.me/558132999711"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#contact"
                 className="inline-flex items-center gap-2 text-linkar-blue font-medium hover:underline group/link"
               >
                 Saiba Mais

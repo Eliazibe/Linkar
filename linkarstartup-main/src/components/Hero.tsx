@@ -35,7 +35,7 @@ const Hero = () => {
           {/* CTAs */}
           <div className="flex items-center justify-center mb-16 animate-fade-in" style={{ animationDelay: "0.3s" }}>
             <Button variant="hero" size="xl" className="w-full sm:w-auto" asChild>
-              <a href="https://wa.me/558132999711" target="_blank" rel="noopener noreferrer">
+              <a href="#contact">
                 Começar Agora
                 <ArrowRight className="w-5 h-5" />
               </a>

@@ -40,7 +40,7 @@ const HowItWorks = () => {
 
         <div className="grid md:grid-cols-3 gap-8 relative">
           {/* Dashed line connecting steps - hidden on mobile */}
-          <div className="hidden md:block absolute top-6 left-[calc(16.67%+24px)] right-[calc(16.67%+24px)] h-0 border-t-2 border-dashed border-linkar-blue/40" />
+          <div className="hidden md:block absolute top-6 left-[calc(16.67%+48px)] right-[calc(16.67%+48px)] h-0 border-t-2 border-dashed border-linkar-blue/40" />
           
           {steps.map((step, index) => (
             <div key={index} className="relative">
@@ -69,9 +69,7 @@ const HowItWorks = () => {
                 {step.description}
               </p>
               <a
-                href="https://wa.me/558132999711"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#contact"
                 className="inline-flex items-center gap-1 text-linkar-blue font-medium hover:underline group"
               >
                 Entrar em contato
